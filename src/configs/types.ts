@@ -1,8 +1,5 @@
 import { IconType } from "react-icons";
 
-import { langs } from "./langs";
-
-
 export type commonArgs = {
   slug: string;
 };
@@ -10,12 +7,9 @@ export type commonArgs = {
 export type Data = {
   logo: string;
   image: string;
-  langs: {
-    lang: string;
-    title: string;
-    description: string;
-    data: JSX.Element;
-  }[];
+  title: string;
+  description: string;
+  data: JSX.Element;
   slug: string;
   related_posts: string[];
   tags: string[];
@@ -38,14 +32,11 @@ export type profileType = {
   image: string;
   email: string;
   phone: string;
-  langs: {
-    lang: keyof typeof langs;
-    title: string;
-    name: string;
-    about: string;
-    location: string;
-    favorites: string[];
-  }[];
+  title: string;
+  name: string;
+  about: string;
+  location: string;
+  favorites: string[];
   socials: {
     name: string;
     url: string;

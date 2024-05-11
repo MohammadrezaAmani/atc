@@ -3,18 +3,10 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { IoMdContact } from "react-icons/io";
 import { FaPhoenixFramework } from "react-icons/fa6";
 import { SiReaddotcv } from "react-icons/si";
-import { siteConfig } from "../configs/site";
 import { commonArgs } from "../configs/types";
 import Wave from "react-wavify";
 import { PiTelegramLogoLight } from "react-icons/pi";
-import { useLang } from "../hooks/langHook";
 function Footer(props: commonArgs) {
-  const { lang } = useLang();
-
-  let findLang = siteConfig.langs.find((item) => item.lang === lang);
-  if (!findLang) {
-    findLang = siteConfig.langs[0];
-  }
   const buttonSize =
     "h-10 sm:h-12 w-10 sm:w-12 m-2 bg-blue-700 rounded-full p-2.5";
   return (

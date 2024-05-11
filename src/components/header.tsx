@@ -2,18 +2,14 @@ import Wave from "react-wavify";
 import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
 import { CiDark, CiLight } from "react-icons/ci";
-import { PiTranslate } from "react-icons/pi";
 import { useTheme } from "../hooks/themeHook";
-import { useLang } from "../hooks/langHook";
 import Logo from "./logo";
-import { getMenuItems } from "../configs/site";
-import { langs } from "../configs/langs";
+import { menuItems } from "../configs/site";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
   const { theme, toggleTheme } = useTheme();
-  const { lang, toggleLang } = useLang();
   const drawerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
@@ -49,8 +45,7 @@ const Header = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const drawerDirection =
-    langs[lang as keyof typeof langs].dir === "rtl" ? "right-0" : "left-0";
+  const drawerDirection ="right-0";
 
   return (
     <div
@@ -65,7 +60,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               <nav>
                 <ul className="flex space-x-4 rtl:space-x-reverse">
-                  {getMenuItems(lang).map((item, index) => (
+                  {menuItems.map((item, index) => (
                     <li key={index}>
                       <a
                         href={item.slug}
@@ -77,10 +72,6 @@ const Header = () => {
                   ))}
 
                   <div className="flex items-center space-x-4 rtl:space-x-reverse">
-                    <PiTranslate
-                      className="w-6 h-6 dark:text-cyan-500 cursor-pointer"
-                      onClick={toggleLang}
-                    />
                     {theme === "light" ? (
                       <CiDark
                         className="w-6 h-6 cursor-pointer"
@@ -152,7 +143,7 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <div className="flex p-4 pt-10 justify-center">
                   <div className="">
-                    {getMenuItems(lang).map((item, index) => (
+                    {menuItems.map((item, index) => (
                       <a
                         href={item.slug}
                         className="flex flex-row font-vazir py-2 px-1 space-x-2 rtl:space-x-reverse"
@@ -167,10 +158,6 @@ const Header = () => {
                 </div>
               </div>
               <div className="flex flex-row justify-between mb-4 p-5 text-slate-600 dark:text-white">
-                <PiTranslate
-                  className="w-6 h-6 dark:text-cyan-500"
-                  onClick={toggleLang}
-                />
                 {theme === "light" ? (
                   <CiDark className="w-6 h-6" onClick={toggleTheme} />
                 ) : (

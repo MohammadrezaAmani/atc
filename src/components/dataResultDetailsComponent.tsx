@@ -2,17 +2,10 @@ import { IoReturnUpBackOutline } from "react-icons/io5";
 
 import { dataType } from "../configs/types";
 import { BaseUri } from "../configs/site";
-import { useLang } from "../hooks/langHook";
 import { useTheme } from "../hooks/themeHook";
 
 export function DataDetails({ slug, data }: dataType) {
-  const { lang } = useLang();
   const { theme } = useTheme();
-  let lang_data = data.langs.find((item) => item.lang === lang);
-  console.log(lang_data, lang, data.langs);
-  if (!lang_data) {
-    lang_data = data.langs[0];
-  }
   slug = slug.split(":")[0];
 
   const containerClass = theme === "light" ? "bg-white" : "bg-neutral-800";
@@ -30,7 +23,7 @@ export function DataDetails({ slug, data }: dataType) {
             <div className="flex flex-col">
               <div className="flex items-center ">
                 <img src={data.logo} alt="logo" className="w-16 h-auto mr-4" />
-                <h5 className={`mb-1 ${textColorClass}`}>{lang_data.title}</h5>
+                <h5 className={`mb-1 ${textColorClass}`}>{data.title}</h5>
               </div>
               <p className={`text-sm ${textColorClass}`}>{data.created_at}</p>
             </div>
@@ -51,11 +44,11 @@ export function DataDetails({ slug, data }: dataType) {
             alt="data"
             className="w-full mb-4 rounded-lg h-auto"
           />
-          <p className={`mb-4 ${textColorClass}`}>{lang_data.description}</p>
+          <p className={`mb-4 ${textColorClass}`}>{data.description}</p>
           <div
             className={`bg-gray-100 dark:bg-gray-400 rounded-lg shadow-md my-3 p-4 w-full ${textColorClass}`}
           >
-            {lang_data.data}
+            {data.data}
           </div>
         </div>
         <div className="flex flex-wrap px-4 space-x-1 rtl:space-x-reverse space-y-1 pb-5">

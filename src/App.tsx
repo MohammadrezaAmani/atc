@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { useEffect, startTransition, useMemo } from "react";
+import { useMemo } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./app/page";
@@ -12,41 +12,14 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import { routes } from "./configs/routes";
 import { Layout } from "./app/layout";
-import { useLang } from "./hooks/langHook";
-import { langs } from "./configs/langs";
-
 
 export function App() {
-  const { lang, setLang } = useLang();
-  useEffect(() => {
-    const updateLanguage = (newLang: string) => {
-      if (!Object.keys(langs).includes(newLang)) {
-        newLang = Object.keys(langs)[0];
-      }
-      startTransition(() => {
-        document.documentElement.dir = langs[newLang as keyof typeof langs].dir;
-        document.documentElement.lang =
-          langs[newLang as keyof typeof langs].short;
-        setLang(newLang as keyof typeof langs);
-        localStorage.setItem("lang", newLang);
-      });
-    };
-    const initializeLanguage = () => {
-      const newLang = localStorage.getItem("lang") || "";
-      if (Object.keys(langs).includes(newLang)) {
-        updateLanguage(newLang);
-      }
-    };
-    initializeLanguage();
-  }, [setLang]);
-
   const memoizedHeader = useMemo(() => {
     return <Header />;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [lang]);
+  }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const memoizedFooter = useMemo(() => <Footer slug="/" />, [lang]);
+  const memoizedFooter = useMemo(() => <Footer slug="/" />, []);
   const router = createBrowserRouter([
     {
       path: routes.home.path,

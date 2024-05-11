@@ -1,9 +1,3 @@
-/*
-
-  * The data in this section will be displayed in the resume section.
-
-*/
-
 import { PiTelegramLogoThin } from "react-icons/pi";
 
 export const profile = {

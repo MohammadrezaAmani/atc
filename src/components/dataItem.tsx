@@ -1,16 +1,9 @@
 import { BaseUri } from "../configs/site";
 import { dataType } from "../configs/types";
-import { useLang } from "../hooks/langHook";
 import { useTheme } from "../hooks/themeHook";
 
 export const DataItem: React.FC<dataType> = ({ data, slug }) => {
-  const { lang } = useLang();
   const { theme } = useTheme();
-  let keylang = data.langs.find((item) => item.lang === lang);
-  if (!keylang) {
-    keylang = data.langs[0];
-  }
-
   const containerClass = theme === "light" ? "shadow-lg" : "shadow-dark";
   const textColorClass = theme === "light" ? "text-black" : "text-white";
   const bgColorClass = theme === "light" ? "bg-white" : "bg-neutral-800";
@@ -25,18 +18,18 @@ export const DataItem: React.FC<dataType> = ({ data, slug }) => {
           <div className="h-48 w-full ">
             <img
               src={data.image}
-              alt={keylang.title}
+              alt={data.title}
               className="rounded-lg object-cover w-full h-full"
             />
           </div>
         )}
         <div className="flex justify-between mt-4">
           <h6 className={`text-xl font-bold ${textColorClass}`}>
-            {keylang.title}
+            {data.title}
           </h6>
           <p className={`text-xs ${textColorClass}`}>{data.updated_at}</p>
         </div>
-        <p className={`mt-2 ${textColorClass}`}>{keylang.description}</p>
+        <p className={`mt-2 ${textColorClass}`}>{data.description}</p>
       </a>
       <div className="mt-2 flex flex-row flex-wrap space-x-1 w-full">
         {data.tags.map((tag, index) => (
