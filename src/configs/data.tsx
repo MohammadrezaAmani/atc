@@ -1,16 +1,17 @@
 import { PiTelegramLogoThin } from "react-icons/pi";
 
+import profile_img from "../assets/ATC.png"
+
 export const profile = {
-  image: "https://avatars.githubusercontent.com/u/64687226?v=4",
+  image: {profile_img},
   email: "more.amani@yahoo.com",
   phone: "",
-  
   socials: [
     {
       name: "telegram",
-      url: "https://t.me/Mohammadreza_amani",
+      url: "https://t.me/ATC_AUT",
       icon: PiTelegramLogoThin,
-      value: "Mohammadreza_amani",
+      value: "ATC",
     },
   ],
 };

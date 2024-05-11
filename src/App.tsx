@@ -1,101 +1,102 @@
-import { Suspense } from "react";
-import { useMemo } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useMemo, useEffect } from 'react'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import Home from "./app/page";
-import Prizes from "./app/prizes/page";
-import About from "./app/about/page";
-import FAQ from "./app/faq/page";
-import Login from "./app/login/page";
-import SignUp from "./app/signup/page";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import { routes } from "./configs/routes";
-import { Layout } from "./app/layout";
+import Home from './app/page'
+import Prizes from './app/prizes/page'
+import About from './app/about/page'
+import FAQ from './app/faq/page'
+import Login from './app/login/page'
+import SignUp from './app/signup/page'
+import Header from './components/header'
+import Footer from './components/footer'
+import { routes } from './configs/routes'
+import { Layout } from './app/layout'
+import { useTheme } from './hooks/themeHook'
 
-export function App() {
+export function App () {
   const memoizedHeader = useMemo(() => {
-    return <Header />;
-  }, []);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const memoizedFooter = useMemo(() => <Footer slug="/" />, []);
+    return <Header />
+  }, [])
+  const { setTheme } = useTheme()
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme')
+    if (localTheme) {
+      setTheme(localTheme)
+      if (localTheme === 'dark') {
+        document.documentElement.classList.add('dark')
+        document.documentElement.style.backgroundColor = 'rgb(38, 38, 38)'
+      }
+      if (localTheme === 'light') {
+        document.documentElement.classList.remove('dark')
+        document.documentElement.style.backgroundColor = '#fff'
+      }
+    }
+  }, [setTheme])
+  const memoizedFooter = useMemo(() => <Footer slug='/' />, [])
   const router = createBrowserRouter([
     {
       path: routes.home.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<Home />}
-          />
-        </Suspense>
-      ),
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<Home />}
+        />
+      )
     },
     {
       path: routes.prizes.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<Prizes />}
-          />
-        </Suspense>
-      ),
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<Prizes />}
+        />
+      )
     },
     {
       path: routes.signup.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<SignUp />}
-          />
-        </Suspense>
-      ),
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<SignUp />}
+        />
+      )
     },
     {
       path: routes.about.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<About slug={routes.about.path} />}
-          />
-        </Suspense>
-      ),
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<About slug={routes.about.path} />}
+        />
+      )
     },
     {
       path: routes.login.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<Login />}
-          />
-        </Suspense>
-      ),
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<Login />}
+        />
+      )
     },
     {
       path: routes.faq.path,
       element: (
-        <Suspense fallback={null}>
-          <Layout
-            memoizedHeader={memoizedHeader}
-            memoizedFooter={memoizedFooter}
-            children={<FAQ />}
-          />
-        </Suspense>
-      ),
-    },
-  ]);
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<FAQ />}
+        />
+      )
+    }
+  ])
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
