@@ -3,7 +3,6 @@ import { commonArgs } from "../../configs/types";
 import data, { contact_type } from "../../configs/about/data";
 import { langs } from "../../configs/langs";
 import { useLang } from "../../hooks/langHook";
-import { useTheme } from "../../hooks/themeHook";
 
 interface ContactWayProps {
   way: contact_type;

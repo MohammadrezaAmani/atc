@@ -15,7 +15,7 @@ export const DataItem: React.FC<dataType> = ({ data, slug }) => {
   // Define classes based on theme
   const containerClass = theme === "light" ? "shadow-lg" : "shadow-dark";
   const textColorClass = theme === "light" ? "text-black" : "text-white";
-  const bgColorClass = theme === "light" ? "bg-white" : "bg-gray-900";
+  const bgColorClass = theme === "light" ? "bg-white" : "bg-neutral-800";
 
   return (
     <div
@@ -45,9 +45,7 @@ export const DataItem: React.FC<dataType> = ({ data, slug }) => {
           <span
             key={index}
             className={`p-1 rounded-md dark:bg-gray-700 bg-gray-200 rtl:space-x-reverse space-x-2 text-sm font-thin`}
-          >
-            <a href={BaseUri + routes.category.path + "/" + tag}>{"#" + tag}</a>
-          </span>
+          ></span>
         ))}
       </div>
     </div>

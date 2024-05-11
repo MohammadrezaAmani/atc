@@ -20,7 +20,7 @@ function Footer(props: commonArgs) {
   return (
     <div className="w-full">
       <Wave
-        fill="#1ED4DE"
+        fill="#FFA500"
         className="mt-10 border-gray-400"
         // paused={false}
         style={{ display: "flex" }}
@@ -31,9 +31,9 @@ function Footer(props: commonArgs) {
           points: 3,
         }}
       ></Wave>{" "}
-      <footer className={`text-center bg-white dark:bg-slate-900`}>
+      <footer className={`text-center bg-white dark:bg-neutral-800`}>
         <Wave
-          fill="rgb(17 24 39)"
+          fill="rgb(38 38 38)"
           className="-mt-12 border-gray-400"
           // paused={false}
           style={{ display: "flex" }}
@@ -44,7 +44,7 @@ function Footer(props: commonArgs) {
             points: 4,
           }}
         ></Wave>
-        <div className="flex justify-center px-1 pb-5 bg-gray-900">
+        <div className="flex justify-center px-1 pb-5 bg-neutral-800 text-white">
           <PiLinkedinLogoThin className={` bg-blue-700 ${buttonSize}`} />
           <VscGithubAlt className={` bg-gray-700 ${buttonSize}`} />
           <IoMdContact className={` bg-green-700 ${buttonSize}`} />

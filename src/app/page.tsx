@@ -6,9 +6,9 @@ import { SiReaddotcv } from "react-icons/si";
 import { PiCodesandboxLogoThin } from "react-icons/pi";
 import { useLang } from "../hooks/langHook";
 import { homePage } from "../configs/site";
-
+import pic from "../assets/pic.png";
 const boxStyle =
-  "rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-gray-950 dark:to-black transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl";
+  "rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-neutral-900 dark:to-neutral-900 transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl";
 
 export default function Blog({ slug }: commonArgs) {
   const { lang } = useLang();
@@ -24,11 +24,7 @@ export default function Blog({ slug }: commonArgs) {
           <div
             className={`flex p-4 sm:p-8 w-10/12 sm:w-auto h-auto justify-center mt-12 sm:mt-0 ${boxStyle}`}
           >
-            <img
-              src="https://avatars.githubusercontent.com/u/64687226?v=4"
-              alt="Personal Portfolio"
-              className={`rounded-md`}
-            />
+            <img src={pic} alt="Personal Portfolio" className={`rounded-md`} />
           </div>
           <div className="grid grid-cols-12 w-10/12 sm:w-auto gap-4">
             <div className={`col-span-full p-6 ${boxStyle}`}>
@@ -63,13 +59,13 @@ export default function Blog({ slug }: commonArgs) {
             >
               <div className="flex justify-end">
                 <a
-                  href="#contacts"
+                  href="/login"
                   className={`mr-5 p-4 text-md rounded-md shadow-md hover:shadow-xl dark:text-white`}
                 >
                   <span>{textlang.cvButton}</span>
                 </a>
                 <a
-                  href="/#/about"
+                  href="/about"
                   className={`p-4 rounded-md shadow-md hover:shadow-xl dark:text-white`}
                 >
                   <span>{textlang.contactButton}</span>

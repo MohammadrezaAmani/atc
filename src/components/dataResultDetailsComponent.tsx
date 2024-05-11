@@ -18,7 +18,7 @@ export function DataDetails({ slug, data }: dataType) {
   slug = slug.split(":")[0];
 
   // Define classes based on theme
-  const containerClass = theme === "light" ? "bg-white" : "bg-gray-900";
+  const containerClass = theme === "light" ? "bg-white" : "bg-neutral-800";
   const textColorClass = theme === "light" ? "text-gray-500" : "text-gray-400";
   const linkColorClass = theme === "light" ? "text-blue-500" : "text-blue-300";
   const iconColorClass = theme === "light" ? "text-gray-600" : "text-gray-400";
@@ -49,7 +49,11 @@ export function DataDetails({ slug, data }: dataType) {
               </a>
             </div>
           </div>
-          <img src={data.image} alt="data" className="w-full mb-4 rounded-lg h-auto" />
+          <img
+            src={data.image}
+            alt="data"
+            className="w-full mb-4 rounded-lg h-auto"
+          />
           <p className={`mb-4 ${textColorClass}`}>{lang_data.description}</p>
           <div
             className={`bg-gray-100 dark:bg-gray-400 rounded-lg shadow-md my-3 p-4 w-full ${textColorClass}`}
@@ -59,14 +63,7 @@ export function DataDetails({ slug, data }: dataType) {
         </div>
         <div className="flex flex-wrap px-4 space-x-1 rtl:space-x-reverse space-y-1 pb-5">
           {data.tags.map((tag, index) => (
-            <div key={index}>
-              <a
-                className="bg-gray-200 p-1 rounded-md text-xs"
-                href={BaseUri + routes.category.path + "/" + tag}
-              >
-                {"#" + tag}
-              </a>
-            </div>
+            <div key={index}>{"#" + tag}</div>
           ))}
         </div>
       </div>

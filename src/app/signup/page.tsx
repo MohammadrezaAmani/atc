@@ -1,6 +1,6 @@
 import React from 'react'
 
-function FAQ() {
+function SignUp() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function FAQ() {
   )
 }
 
-export default FAQ
+export default SignUp

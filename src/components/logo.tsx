@@ -11,7 +11,7 @@ function Slug(props: commonArgs) {
   return (
     <a
       href={props.slug}
-      className={`font-sacramento text-xl text-black dark:text-white`}
+      className={`font-sacramento text-2xl text-black dark:text-white`}
     >
       {findLang.title}
     </a>

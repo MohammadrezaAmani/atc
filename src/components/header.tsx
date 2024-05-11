@@ -5,10 +5,9 @@ import { useLang } from "../hooks/langHook";
 import Logo from "./logo";
 import { getMenuItems } from "../configs/site";
 import { langs } from "../configs/langs";
-import { profile } from "../configs/data";
 import { CiDark, CiLight } from "react-icons/ci";
 import { PiTranslate } from "react-icons/pi";
-
+import Wave from "react-wavify";
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
@@ -49,14 +48,12 @@ const Header = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const iconTextColor = "text-gray-600";
-
   const drawerDirection =
-    langs[lang as keyof typeof langs].dir === "rtl" ? "left-0" : "right";
+    langs[lang as keyof typeof langs].dir === "rtl" ? "right-0" : "left-0";
 
   return (
     <div
-      className={`fixed w-full bg-white dark:bg-gray-900 bg-blend-saturation ${
+      className={`fixed w-full bg-white dark:bg-neutral-800 bg-blend-saturation ${
         showShadow ? " shadow-md " : ""
       } z-10`}
     >
@@ -71,30 +68,30 @@ const Header = () => {
                     <li key={index}>
                       <a
                         href={item.slug}
-                        className="font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
+                        className="font-medium text-gray-600 dark:text-white hover:text-gray-900 dark:hover:text-gray-300"
                       >
                         {item.text}
                       </a>
                     </li>
                   ))}
 
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-4 rtl:space-x-reverse">
                     <PiTranslate
+                      className="w-6 h-6 dark:text-cyan-500 cursor-pointer"
                       onClick={toggleLang}
-                      className={`w-5 h-5 cursor-pointer ${iconTextColor} text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"`}
                     />
                     {theme === "light" ? (
-                      <CiLight
-                        className="w-6 h-6 cursor-pointer text-yellow-400"
+                      <CiDark
+                        className="w-6 h-6 cursor-pointer"
                         onClick={toggleTheme}
                       />
                     ) : (
-                      <CiDark
-                        className="w-6 h-6 cursor-pointer text-white"
+                      <CiLight
+                        className="w-6 h-6 text-yellow-400 cursor-pointer"
                         onClick={toggleTheme}
                       />
                     )}
-                    {profile.socials.map((item, index) => (
+                    {/* {social.map((item, index) => (
                       <a
                         href={item.url}
                         key={index}
@@ -102,7 +99,7 @@ const Header = () => {
                       >
                         {<item.icon className="h-6 w-6" />}
                       </a>
-                    ))}
+                    ))} */}
                   </div>
                 </ul>
               </nav>
@@ -120,7 +117,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 overflow-hidden bg-gray-800 bg-opacity-50 backdrop-blur-md transition-opacity duration-300 shadow-lg ${
+        className={`fixed inset-0 z-40 overflow-hidden bg-neutral-700 bg-opacity-50 backdrop-blur-md transition-opacity duration-300 shadow-lg ${
           drawerOpen ? "" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleDrawer}
@@ -128,56 +125,68 @@ const Header = () => {
         <div className="flex justify-end h-full">
           <div
             ref={drawerRef}
-            className={`w-auto bg-white dark:bg-gray-900 transform transition-transform duration-300 ease-in-out ${drawerDirection} ${
+            className={`w-auto bg-white dark:bg-neutral-800 transform transition-transform duration-300 ease-in-out ${drawerDirection} ${
               drawerOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
             <div className="flex flex-col justify-between h-full">
               <div>
-                <div className="bg-white max-w-52">
-                  <img
-                    src="/logo512.png"
-                    alt="logo"
-                    className="w-full bg-slate-500"
-                  />
-                </div>
-                <div className="p-4 pt-10">
+                <Wave
+                  fill="#FFA500"
+                  className="border-gray-400 dark:text-gray-100 rotate-180"
+                  // paused={false}
+                  style={{ display: "flex" }}
+                  options={{
+                    height: 5,
+                    amplitude: 10,
+                    speed: 0.2,
+                    points: 5,
+                  }}
+                ></Wave>
+                <Wave
+                  fill="#FFFA00"
+                  className="-mt-40 border-gray-400 dark:text-neutral-500 rotate-180"
+                  // paused={false}
+                  style={{ display: "flex" }}
+                  options={{
+                    height: 10,
+                    amplitude: 10,
+                    speed: 0.14,
+                    points: 4,
+                  }}
+                ></Wave>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex p-4 pt-10 justify-center">
                   <div className="">
                     {getMenuItems(lang).map((item, index) => (
                       <a
                         href={item.slug}
                         className="flex flex-row font-vazir py-2 px-1 space-x-2 rtl:space-x-reverse"
                       >
-                        <item.icon className="w-5 h-5 text-xs text-slate-600" />
-                        <p className="text-slate-600">{item.text} </p>
+                        <item.icon className="w-5 h-5 text-xs text-slate-600 dark:text-white" />
+                        <p className="text-slate-600 dark:text-white">
+                          {item.text}{" "}
+                        </p>
                       </a>
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col px-6 my-5">
-                <div className="flex flex-row justify-between mb-4 text-slate-600">
-                  <PiTranslate onClick={toggleLang} />
-                  {theme === "light" ? (
-                    <CiLight
-                      className="w-6 h-6 text-yellow-400"
-                      onClick={toggleTheme}
-                    />
-                  ) : (
-                    <CiDark className="w-6 h-6" onClick={toggleTheme} />
-                  )}
-                </div>
-                <div className="flex flex-row justify-around">
-                  {profile.socials.map((item, index) => (
-                    <a
-                      href={item.url}
-                      key={index}
-                      className="text-xl text-slate-600"
-                    >
-                      {<item.icon className="h-6 w-6" />}
-                    </a>
-                  ))}
-                </div>
+              <div className="flex flex-row justify-between mb-4 p-5 text-slate-600 dark:text-white">
+                <PiTranslate
+                  className="w-6 h-6 dark:text-cyan-500"
+                  onClick={toggleLang}
+                />
+                {theme === "light" ? (
+                  <CiDark className="w-6 h-6" onClick={toggleTheme} />
+                ) : (
+                  <CiLight
+                    className="w-6 h-6 text-yellow-400"
+                    onClick={toggleTheme}
+                  />
+                )}
               </div>
             </div>
           </div>
