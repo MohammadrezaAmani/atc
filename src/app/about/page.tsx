@@ -36,7 +36,7 @@ const About: React.FC<commonArgs> = () => {
         <div className="about-content flex  justify-between flex-col">
           <div>
             <p className="font-semibold mb-4 text-xl">{data.title}</p>
-            <p className="text-gray-700 prose mb-6 mt-1">{data.content}</p>
+            <p className="text-gray-700 dark:text-white prose mb-6 mt-1">{data.content}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {data.contact_ways.ways.map((way, index) => (
