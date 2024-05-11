@@ -1,18 +1,16 @@
-import { routes } from "../configs/routes";
 import { BaseUri } from "../configs/site";
 import { dataType } from "../configs/types";
 import { useLang } from "../hooks/langHook";
-import { useTheme } from "../hooks/themeHook"; // Import useTheme hook
+import { useTheme } from "../hooks/themeHook";
 
 export const DataItem: React.FC<dataType> = ({ data, slug }) => {
   const { lang } = useLang();
-  const { theme } = useTheme(); // Get the theme state
+  const { theme } = useTheme();
   let keylang = data.langs.find((item) => item.lang === lang);
   if (!keylang) {
     keylang = data.langs[0];
   }
 
-  // Define classes based on theme
   const containerClass = theme === "light" ? "shadow-lg" : "shadow-dark";
   const textColorClass = theme === "light" ? "text-black" : "text-white";
   const bgColorClass = theme === "light" ? "bg-white" : "bg-neutral-800";
@@ -20,7 +18,7 @@ export const DataItem: React.FC<dataType> = ({ data, slug }) => {
   return (
     <div
       id={`data-item-${data.slug}`}
-      className={`${containerClass} rounded-sm p-6 ${bgColorClass}`} // Apply conditional classes
+      className={`${containerClass} rounded-sm p-6 ${bgColorClass}`}
     >
       <a href={BaseUri + slug + "/" + data.slug} className="block w-full">
         {data.image !== "" && (

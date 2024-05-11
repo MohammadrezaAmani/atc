@@ -1,8 +1,9 @@
 import App from "./App";
 import React from "react";
 import ReactDOM from "react-dom";
-import { LangProvider } from "./hooks/langHook"; // Import the LangProvider
-import { ThemeProvider } from "./hooks/themeHook"; // Import the ThemeProvider
+
+import { LangProvider } from "./hooks/langHook";
+import { ThemeProvider } from "./hooks/themeHook";
 
 import "./index.css";
 

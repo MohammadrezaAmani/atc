@@ -1,15 +1,13 @@
-import React from "react";
 import { IoReturnUpBackOutline } from "react-icons/io5";
 
 import { dataType } from "../configs/types";
-import { routes } from "../configs/routes";
 import { BaseUri } from "../configs/site";
 import { useLang } from "../hooks/langHook";
-import { useTheme } from "../hooks/themeHook"; // Import useTheme hook
+import { useTheme } from "../hooks/themeHook";
 
 export function DataDetails({ slug, data }: dataType) {
   const { lang } = useLang();
-  const { theme } = useTheme(); // Access the theme state
+  const { theme } = useTheme();
   let lang_data = data.langs.find((item) => item.lang === lang);
   console.log(lang_data, lang, data.langs);
   if (!lang_data) {
@@ -17,7 +15,6 @@ export function DataDetails({ slug, data }: dataType) {
   }
   slug = slug.split(":")[0];
 
-  // Define classes based on theme
   const containerClass = theme === "light" ? "bg-white" : "bg-neutral-800";
   const textColorClass = theme === "light" ? "text-gray-500" : "text-gray-400";
   const linkColorClass = theme === "light" ? "text-blue-500" : "text-blue-300";

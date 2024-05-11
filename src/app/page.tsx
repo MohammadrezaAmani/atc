@@ -1,5 +1,3 @@
-import React from "react";
-import { commonArgs } from "../configs/types";
 import { IoMdContact } from "react-icons/io";
 import { FaUniversity, FaPhoenixFramework } from "react-icons/fa";
 import { SiReaddotcv } from "react-icons/si";
@@ -10,7 +8,7 @@ import pic from "../assets/pic.png";
 const boxStyle =
   "rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-neutral-900 dark:to-neutral-900 transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl";
 
-export default function Blog({ slug }: commonArgs) {
+export default function HomePage() {
   const { lang } = useLang();
   let textlang = homePage.find((item) => item.lang === lang);
   if (!textlang) {

@@ -51,33 +51,6 @@ function Footer(props: commonArgs) {
           <PiTelegramLogoLight className={` bg-fuchsia-700 ${buttonSize}`} />
           <FaPhoenixFramework className={` bg-red-700 ${buttonSize}`} />
           <SiReaddotcv className={` bg-purple-700 ${buttonSize}`} />
-          {/* <div className="flex justify-center mt-12">
-            <Tooltip title={"projects"}>
-              <a href="/#/project">
-                <PiCodesandboxLogoThin className="h-12 w-12 m-2 bg-yellow-500 rounded-full p-2 text-white" />
-              </a>
-            </Tooltip>
-            <Tooltip title={"about"}>
-              <a href="/#/about">
-                <IoMdContact className="h-12 w-12 m-2 bg-green-700 rounded-full p-2 text-white" />
-              </a>
-            </Tooltip>
-            <Tooltip title={"education"}>
-              <a href="/#/education">
-                <FaUniversity className="h-12 w-12 m-2 bg-yellow-700 rounded-full p-2 text-white" />
-              </a>
-            </Tooltip>
-            <Tooltip title={"blog"}>
-              <a href="/#/blog">
-                <FaPhoenixFramework className="h-12 w-12 m-2 bg-red-700 rounded-full p-2 text-white" />
-              </a>
-            </Tooltip>
-            <Tooltip title={"resume"}>
-              <a href="/#/resume">
-                <SiReaddotcv className="h-12 w-12 m-2 bg-purple-700 rounded-full p-2 text-white" />
-              </a>
-            </Tooltip>
-          </div> */}
         </div>
       </footer>
     </div>

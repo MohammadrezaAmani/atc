@@ -1,19 +1,20 @@
+import Wave from "react-wavify";
 import { useState, useEffect, useRef } from "react";
 import { RiMenu4Line } from "react-icons/ri";
+import { CiDark, CiLight } from "react-icons/ci";
+import { PiTranslate } from "react-icons/pi";
 import { useTheme } from "../hooks/themeHook";
 import { useLang } from "../hooks/langHook";
 import Logo from "./logo";
 import { getMenuItems } from "../configs/site";
 import { langs } from "../configs/langs";
-import { CiDark, CiLight } from "react-icons/ci";
-import { PiTranslate } from "react-icons/pi";
-import Wave from "react-wavify";
+
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { lang, toggleLang } = useLang();
-  const drawerRef = useRef<HTMLDivElement>(null); // Define the type for the ref
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = () => {
     const scrollTop = window.scrollY || document.body.scrollTop;
@@ -91,15 +92,6 @@ const Header = () => {
                         onClick={toggleTheme}
                       />
                     )}
-                    {/* {social.map((item, index) => (
-                      <a
-                        href={item.url}
-                        key={index}
-                        className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300"
-                      >
-                        {<item.icon className="h-6 w-6" />}
-                      </a>
-                    ))} */}
                   </div>
                 </ul>
               </nav>

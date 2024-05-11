@@ -1,18 +1,20 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { useEffect, startTransition, useMemo } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { langs } from "./configs/langs";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import { routes } from "./configs/routes";
-import { Layout } from "./app/layout";
-import { useLang } from "./hooks/langHook";
+
 import Home from "./app/page";
 import Prizes from "./app/prizes/page";
 import About from "./app/about/page";
 import FAQ from "./app/faq/page";
 import Login from "./app/login/page";
 import SignUp from "./app/signup/page";
+import Header from "./components/header";
+import Footer from "./components/footer";
+import { routes } from "./configs/routes";
+import { Layout } from "./app/layout";
+import { useLang } from "./hooks/langHook";
+import { langs } from "./configs/langs";
+
 
 export function App() {
   const { lang, setLang } = useLang();
@@ -53,7 +55,7 @@ export function App() {
           <Layout
             memoizedHeader={memoizedHeader}
             memoizedFooter={memoizedFooter}
-            children={<Home slug={routes.home.path} />}
+            children={<Home />}
           />
         </Suspense>
       ),
