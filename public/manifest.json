@@ -1,10 +1,10 @@
 {
-  "name": "Mohammadreza Amani",
-  "short_name": "Mohammadreza Amani",
-  "dir": "ltr",
-  "lang": "en-US",
-  "orientation": "any",
-  "description": "وبسایت شخصی محمدرضا امانی، مهندس نرم افزار و توسعه دهنده وب | Personal website of Mohammadreza Amani, software engineer and web developer.",
+  "name": "ATC",
+  "short_name": "ATC",
+  "dir": "rtl",
+  "lang": "fa-IR",
+  "orientation": "natural",
+  "description": "مسابقات بزرگ ترید الگوریتمی دانشگاه صنعتی امیرکبیر | ATC",
   "icons": [
     {
       "src": "favicon.ico",
