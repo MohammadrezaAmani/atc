@@ -1,5 +1,5 @@
 import { commonArgs } from "../configs/types";
-import { siteConfig } from "../configs/site";
+import logo from "../assets/atclogo.png";
 
 function Slug(props: commonArgs) {
   return (
@@ -7,7 +7,7 @@ function Slug(props: commonArgs) {
       href={props.slug}
       className={`font-sacramento text-2xl text-black dark:text-white`}
     >
-      {siteConfig.title}
+      <img src={logo} alt="ATC" className={`h-auto w-16`} />
     </a>
   );
 }

@@ -6,6 +6,7 @@ import { CiTrophy } from 'react-icons/ci'
 import { BiMessageSquareDetail } from 'react-icons/bi'
 import { TbMessageQuestion } from 'react-icons/tb'
 import { CiLogin } from 'react-icons/ci'
+import { CiBitcoin } from "react-icons/ci";
 
 import aut from '../assets/aut_fa.png'
 import algo from '../assets/computional-geometry.png'
@@ -65,15 +66,21 @@ export const homePage = {
   subtitle: <p className='text-slate-600'>یک مسابقه ساده با کلی جایزه!</p>,
   skills: [
     {
-      title: 'برنامه نویسی و خنده',
+      title: 'کد بزن و لذت ببر',
       icon: TbHeartCode,
       url: 'https://github.com/MohammadrezaAmani'
+    },
+    {
+      title: 'با صد میلیون تومن جایزه!',
+      icon: CiBitcoin,
+      url: '/prizes'
     },
     {
       title: 'تهران، ایران',
       icon: CiLocationOn,
       url: 'https://www.google.com/maps/d/viewer?mid=132fq12ig_YfdeN0cxzAkc6Ik4lo&hl=en&ll=35.71061825680851%2C51.4071210981902&z=17'
-    }
+    },
+  
   ],
   cvButton: 'ثبت نام',
   contactButton: 'برندگان'
@@ -94,11 +101,6 @@ export const sponsors = [
     name: 'کوئرا',
     url: 'https://quera.ir/',
     image: quera
-  },
-  {
-    name: 'مگنت ایکس دی',
-    url: 'https://magnetxd.com/',
-    image: magnetxd
   },
   {
     name: 'والکس',
