@@ -7,9 +7,12 @@ import About from './app/about/page'
 import FAQ from './app/faq/page'
 import Login from './app/login/page'
 import SignUp from './app/signup/page'
+import Winners from './app/winners/page'
+import Dashboard from './app/dashboard/page'
 
 import Header from './components/header'
 import Footer from './components/footer'
+
 
 import { routes } from './configs/routes'
 import { Layout } from './app/layout'
@@ -77,6 +80,26 @@ export function App () {
           memoizedHeader={memoizedHeader}
           memoizedFooter={memoizedFooter}
           children={<FAQ />}
+        />
+      )
+    },
+    {
+      path: routes.winners.path,
+      element: (
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<Winners />}
+        />
+      )
+    },
+    {
+      path: routes.dashboard.path,
+      element: (
+        <Layout
+          memoizedHeader={memoizedHeader}
+          memoizedFooter={memoizedFooter}
+          children={<Dashboard />}
         />
       )
     }

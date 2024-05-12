@@ -28,6 +28,18 @@ export const routes = {
         description: "ثبت نام در مسابقات ترید امیرکبیر",
 
   },
+  winners: {
+    path: "/winners",
+        title: "لیست برنده‌ها",
+        description: "لیست برنده‌های مسابقات ترید امیرکبیر",
+
+  },
+  dashboard: {
+    path: "/dashboard",
+        title: "داشبورد",
+        description: "داشبورد مسابقات ترید امیرکبیر",
+
+  },
   notFound: {
         title: "پیدا نشد",
         description: "صفحه پیدا نشد",

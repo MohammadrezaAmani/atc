@@ -4,7 +4,7 @@ import { Chart } from '../../components/chart'
 const text = `
 این مسابقه قراره توی سه تا لیگ به نام‌های لیگ یک لیگ دو و لیگ سه برگزار بشه که هرکدوم جایزه‌ی مخصوص به خودش رو داره
 `
-function Prize() {
+function Dashboard() {
   return (
     <div>
       <div className='flex flex-col space-y-11 items-center justify-center h-screen'>
@@ -20,4 +20,4 @@ function Prize() {
   )
 }
 
-export default Prize
+export default Dashboard
