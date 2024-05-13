@@ -11,7 +11,7 @@ function Dashboard() {
         <h1 className='text-4xl font-extrabold text-gray-900 dark:text-gray-100'>
           برنده‌ها
         </h1>
-      <Chart />
+      <Chart width={800} height={600} />
       <p className='text-gray-600 dark:text-gray-300 sm:w-1/2'>
         {text}
       </p>

@@ -1,14 +1,19 @@
-import React from 'react'
-import { Bar } from '@nivo/bar'
+import React from 'react';
+import { Bar } from '@nivo/bar';
+import { useMediaQuery } from 'react-responsive';
 
-export function Chart () {
-  return (
-    <div className='h-96 sm:h-96 md:h-96 lg:h-96 xl:h-96'>
-      <Bar
-        animate={true}
-        width={800}
-        height={400}
-        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+export function Chart({ width, height }: { width: number; height: number }) {
+    const isMobile = useMediaQuery({ query: '(max-width: 640px)' });
+    const chartHeight = isMobile ? 375 : height;
+    const chartWidth = isMobile ? 450 : width;
+
+    return (
+        <div style={{ height: chartHeight }}>
+            <Bar
+                animate={true}
+                width={chartWidth}
+                height={chartHeight}
+                margin={{ top: 50, right: 50, bottom: 50, left: 60 }}
         data={[
           {
             league: 'leauge1',
@@ -132,3 +137,4 @@ export function Chart () {
     </div>
   )
 }
+
