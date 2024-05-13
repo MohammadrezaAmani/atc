@@ -1,15 +1,14 @@
 import { commonArgs } from "../configs/types";
 import logo from "../assets/atclogo.png";
 
-function Slug(props: commonArgs) {
+function Logo(props: commonArgs) {
   return (
     <a
       href={props.slug}
-      className={`font-sacramento text-2xl text-black dark:text-white`}
     >
-      <img src={logo} alt="ATC" className={`h-auto w-16`} />
+      <img src={logo} alt="ATC" className={`h-auto w-20`} />
     </a>
   );
 }
 
-export default Slug;
+export default Logo;

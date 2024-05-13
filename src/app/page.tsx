@@ -166,7 +166,7 @@ export default function HomePage() {
               {sponsors.map((item, index) => (
                 <a
                   key={index}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg transition duration-300 transform hover:scale-105"
+                  className={`flex flex-col items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg transition duration-300 transform hover:scale-105 ${boxStyle}`}
                   href={item.url}
                   rel="noreferrer"
                   target="_blank"

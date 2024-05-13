@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
     <div
-      className={`fixed w-full bg-white dark:bg-neutral-800 bg-blend-saturation ${
+      className={`fixed w-full bg-white dark:bg-neutral-800 bg-blend-saturation bg-opacity-85 ${
         showShadow ? " shadow-md " : ""
       } z-10`}
     >
