@@ -4,10 +4,7 @@ import pic2 from "../assets/pic2.png";
 import pic3 from "../assets/pic3.png";
 import { sponsors } from "../configs/site";
 import winner from "../assets/winner.png";
-import more from "../assets/more.png";
 import poster from "../assets/poster.png";
-import FAQ from "../components/faq";
-import { Faqs } from "../configs/faq/data";
 import { Chart } from "../components/chart";
 
 const boxStyle =
