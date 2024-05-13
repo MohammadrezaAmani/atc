@@ -11,7 +11,7 @@ import { CiBitcoin } from "react-icons/ci";
 import aut from '../assets/aut_fa.png'
 import algo from '../assets/computional-geometry.png'
 import quera from '../assets/quera.png'
-import magnetxd from '../assets/magnetxd.png'
+// import magnetxd from '../assets/magnetxd.png'
 import wallex from '../assets/wallex.png'
 import mcs from '../assets/mcs.png'
 import idk from '../assets/idk.png'
@@ -93,6 +93,11 @@ export const sponsors = [
     image: aut
   },
   {
+    name: 'دانشکده ریاضی و علوم کامپیوتر دانشگاه صنعتی امیرکبیر',
+    url: 'https://mcs.aut.ac.ir/',
+    image: mcs
+  },
+  {
     name: 'الگوریتم',
     url: 'https://www.algo.ir/',
     image: algo
@@ -107,11 +112,7 @@ export const sponsors = [
     url: 'https://wallex.ir/',
     image: wallex
   },
-  {
-    name: 'دانشکده ریاضی و علوم کامپیوتر دانشگاه صنعتی امیرکبیر',
-    url: 'https://mcs.aut.ac.ir/',
-    image: mcs
-  },
+
   {
     name: 'آی دی کی',
     url: 'https://idk.ir/',
