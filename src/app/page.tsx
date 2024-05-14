@@ -101,12 +101,12 @@ export default function HomePage() {
         <div className="flex justify-center mt-12">
           <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center w-8/12">
             <div className="flex items-center flex-col">
-              <p className="text-gray-900 dark:text-white">پوستر اصلی مسابقه</p>
+              <p className="text-gray-900 dark:text-white">پوستر مسابقات</p>
               <br />
               <img
                 src={poster}
                 alt="poster"
-                className="size-1/3 shadow-lg rounded-lg"
+                className="sm:size-1/3 shadow-lg rounded-lg"
               />
             </div>
           </div>
