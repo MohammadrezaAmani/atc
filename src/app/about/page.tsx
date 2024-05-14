@@ -22,27 +22,29 @@ const ContactWay: React.FC<ContactWayProps> = ({ way }) => (
 
 const About: React.FC<commonArgs> = () => {
   return (
-    <div className="container mx-auto py-10 px-4 md:px-0">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div className="about-image">
-          <img
-            src={data.image}
-            alt={data.imageText}
-            className="w-full rounded-lg shadow-md"
-          />
-        </div>
-        <div className="about-content">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            {data.title}
-          </h2>
-          <p className="text-gray-700 dark:text-gray-300 prose mb-6">
-            {data.content}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {data.contact_ways.ways.map((way, index) => (
-              <ContactWay key={index} way={way} />
-            ))}
-          </div>
+    <div className="container mx-auto py-10 px-4 md:px-0 text-center sm:w-6/12 w-11/12 h-screen flex flex-col justify-center">
+      <div className="about-content">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          درباره‌ی ما
+        </h2>
+        <p className="text-gray-700 dark:text-gray-300 prose mb-6">
+          معاملات الگوریتمی نوعی رویکرد در بازارهای مالی است که توسط ماشین‌ها و
+          با دستورات از پیش تعیین شده انجام می‌شود، به جای دخالت عامل انسانی. هر
+          چه دخالت انسانی کمتر باشد، معاملات نزدیک‌تر به الگوریتمی خواهند بود.
+          با توسعه یادگیری ماشینی در سال‌های اخیر، ابزارهای هوشمندی ساخته
+          شده‌اند که می‌توانند به جای انسان فکر کنند و در بسیاری از موارد،
+          عملکرد بهتری نسبت به انسان داشته باشند. این ابزارها به‌طور گسترده در
+          حوزه مالی نیز استفاده می‌شوند. مسابقه{" "}
+          <span className="text-red-500">ATC</span> یک چالش جدی در حوزه معاملات
+          الگوریتمی است که شرکت‌کنندگان باید استراتژی‌های معاملاتی خود را
+          پیاده‌سازی کرده و در نهایت در سه شاخص با یکدیگر رقابت کنند. این مسابقه
+          با استفاده از زبان برنامه‌نویسی پایتون برگزار می‌شود که به دلیل سادگی
+          و غنی بودن کتابخانه‌ها، انتخاب مناسبی است.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {data.contact_ways.ways.map((way, index) => (
+            <ContactWay key={index} way={way} />
+          ))}
         </div>
       </div>
     </div>

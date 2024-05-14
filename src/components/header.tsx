@@ -45,7 +45,7 @@ const Header = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const drawerDirection ="right-0";
+  const drawerDirection = "right-0";
 
   return (
     <div
@@ -108,8 +108,8 @@ const Header = () => {
         <div className="flex justify-end h-full">
           <div
             ref={drawerRef}
-            className={`w-auto bg-white dark:bg-neutral-800 transform transition-transform duration-300 ease-in-out ${drawerDirection} ${
-              drawerOpen ? "translate-x-0" : "translate-x-full"
+            className={`w-3/5 bg-white dark:bg-neutral-800 transform transition-transform duration-300 ease-in-out${drawerDirection} ${
+              drawerOpen ? "-translate-x-0" : "-translate-x-full"
             }`}
           >
             <div className="flex flex-col justify-between h-full">
@@ -141,20 +141,18 @@ const Header = () => {
               </div>
 
               <div className="flex items-center justify-between">
-                <div className="flex p-4 pt-10 justify-center">
-                  <div className="">
-                    {menuItems.map((item, index) => (
-                      <a
-                        href={item.slug}
-                        className="flex flex-row font-vazir py-2 px-1 space-x-2 rtl:space-x-reverse"
-                      >
-                        <item.icon className="w-5 h-5 text-xs text-slate-600 dark:text-white" />
-                        <p className="text-slate-600 dark:text-white">
-                          {item.text}{" "}
-                        </p>
-                      </a>
-                    ))}
-                  </div>
+                <div className="flex flex-col p-4 pt-10 justify-center">
+                  {menuItems.map((item, index) => (
+                    <a
+                      href={item.slug}
+                      className="flex flex-row font-vazir py-2 px-1 space-x-2 rtl:space-x-reverse"
+                    >
+                      <item.icon className="w-5 h-5 text-xs text-slate-600 dark:text-white" />
+                      <p className="text-slate-600 dark:text-white">
+                        {item.text}{" "}
+                      </p>
+                    </a>
+                  ))}
                 </div>
               </div>
               <div className="flex flex-row justify-between mb-4 p-5 text-slate-600 dark:text-white">
