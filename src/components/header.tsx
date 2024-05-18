@@ -1,13 +1,10 @@
-import Wave from "react-wavify";
 import { useState, useEffect, useRef } from "react";
-import { RiMenu4Line } from "react-icons/ri";
 import { CiDark, CiLight } from "react-icons/ci";
 import { useTheme } from "../hooks/themeHook";
 import Logo from "./logo";
-import { menuItems } from "../configs/site";
 
 const Header = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  // const [drawerOpen, setDrawerOpen] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +27,7 @@ const Header = () => {
         drawerRef.current &&
         !drawerRef.current.contains(event.target as Node)
       ) {
-        setDrawerOpen(false);
+        // setDrawerOpen(false);
       }
     };
 
@@ -40,12 +37,6 @@ const Header = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, []);
-
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
-
-  const drawerDirection = "right-0";
 
   return (
     <div
