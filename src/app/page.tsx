@@ -1,20 +1,20 @@
-import { sponsors } from "../configs/site";
-import winner from "../assets/winner.png";
-import poster from "../assets/ATC-Web.jpg";
+import { sponsors } from '../configs/site'
+import winner from '../assets/winner.png'
+import poster from '../assets/ATC-Web.jpg'
 
 const boxStyle =
-  "rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-neutral-800 dark:to-neutral-800 transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl";
+  'rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-neutral-800 dark:to-neutral-800 transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl'
 
-export default function HomePage() {
+export default function HomePage () {
   return (
-    <div className="relative dark:text-white text-center">
-      <div className="flex flex-col justify-center">
-        <div className="flex justify-center mt-12">
+    <div className='relative dark:text-white text-center'>
+      <div className='flex flex-col justify-center'>
+        <div className='flex justify-center mt-12'>
           <div
             className={`flex flex-col sm:flex-row mt-4 justify-between flex-wrap p-10 w-11/12 sm:w-7/12`}
           >
-            <p className="text-gray-600 dark:text-gray-300">
-              <b className="text-gray-900 dark:text-white text-3xl">
+            <p className='text-gray-600 dark:text-gray-300'>
+              <b className='text-gray-900 dark:text-white text-3xl'>
                 مسابقه الگوریتم تریدینگ امیرکبیر
               </b>
               <br />
@@ -27,12 +27,13 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-        <div className="flex justify-center mt-12">
-          <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center w-8/12">
-            <div className="flex items-center flex-col">
-              <div className="flex flex-col sm:flex-row mt-4 justify-between flex-wrap">
-                <p className="text-gray-600 dark:text-gray-300 sm:w-3/5">
-                  <b className="text-gray-900 dark:text-white">لیگ‌ها</b>
+
+        <div className='flex justify-center mt-12'>
+          <div className='flex mt-12 p-4 sm:p-8 justify-center flex-row items-center w-8/12'>
+            <div className='flex items-center flex-col'>
+              <div className='flex flex-col sm:flex-row mt-4 justify-between flex-wrap'>
+                <p className='text-gray-600 dark:text-gray-300 sm:w-3/5'>
+                  <b className='text-gray-900 dark:text-white'>لیگ‌ها</b>
                   <br />
                   لیگ‌های مسابقه بر اساس شاخص‌های زیر، که از جمله شاخص‌های مهم
                   در ارزیابی کیفیت استراتژی‌های معاملاتی استفاده هستند، برگزار
@@ -44,19 +45,19 @@ export default function HomePage() {
                 </p>
                 <img
                   src={winner}
-                  alt="winner"
-                  className="sm:w-2/5 h-auto hidden sm:block"
+                  alt='winner'
+                  className='sm:w-2/5 h-auto hidden sm:block'
                 />
               </div>
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-5">
-          <div className="flex p-10 sm:p-8 justify-center flex-row items-center w-11/12 sm:w-8/12">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-2 rounded-md p-5">
-              <div className="border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2">
-                <p className="text-gray-600 dark:text-gray-300">
-                  <b className="text-gray-900 dark:text-white">لیگ بازدهی</b>
+        <div className='flex justify-center mt-5'>
+          <div className='flex p-10 sm:p-8 justify-center flex-row items-center w-11/12 sm:w-8/12'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 border-2 rounded-md p-5'>
+              <div className='border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2'>
+                <p className='text-gray-600 dark:text-gray-300'>
+                  <b className='text-gray-900 dark:text-white'>لیگ بازدهی</b>
                   <br />
                   این لیگ بر اساس عملکرد نهایی استراتژی، به عنوان بازدهی نهایی،
                   تشکیل می‌شود. این شاخص نشان می‌دهد که یک استراتژی چقدر سودآور
@@ -66,9 +67,9 @@ export default function HomePage() {
                   گیرد.
                 </p>
               </div>
-              <div className="border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2">
-                <p className="text-gray-600 dark:text-gray-300">
-                  <b className="text-gray-900 dark:text-white">لیگ شارپ</b>
+              <div className='border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2'>
+                <p className='text-gray-600 dark:text-gray-300'>
+                  <b className='text-gray-900 dark:text-white'>لیگ شارپ</b>
                   <br />
                   این شاخص بر اساس نسبت بازدهی به ریسک، به عنوان کیفیت تریدها،
                   تعریف می‌شود. با استفاده از امید سود و انحراف معیار سود، این
@@ -79,9 +80,9 @@ export default function HomePage() {
                   تمیز کنیم.
                 </p>
               </div>
-              <div className="border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2">
-                <p className="text-gray-600 dark:text-gray-300">
-                  <b className="text-gray-900 dark:text-white">
+              <div className='border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2'>
+                <p className='text-gray-600 dark:text-gray-300'>
+                  <b className='text-gray-900 dark:text-white'>
                     لیگ بازدهی به بیشینه کاهش
                   </b>
                   <br />
@@ -97,43 +98,65 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        <div className="flex justify-center mt-12">
-          <div className="flex p-4 sm:p-8 justify-center items-center w-8/12 flex-col">
-            <b className="text-gray-900 dark:text-white">حامیان ما</b>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 mt-5">
+        <div className='flex justify-center mt-12'>
+          <div
+            className={`flex flex-col sm:flex-row mt-4 justify-between flex-wrap p-10 w-11/12 sm:w-7/12`}
+          >
+              {/* <b className='text-gray-900 dark:text-white text-2xl'>
+              اطلاعات بیشتر و ثبت نام
+            </b>
+            <br/>
+            <br/>
+            <br/> */}
+            <p className='text-gray-600 dark:text-gray-300'>
+              برای کسب اطلاعات بیشتر و ثبت‌نام از طریق راه‌های زیر اقدام کنید:
+            </p>
+            <div>
+              <b className='text-gray-900 dark:text-white text-xl'>ایمیل </b>:{' '}
+              <a href='mailto:atc@aut.ac.ir'> atc@aut.ac.ir</a>{' '}
+            </div>
+            <div>
+              <b className='text-gray-900 dark:text-white text-xl'>تلگرام </b>:{' '}
+              <a href='https://t.me/ActingDirecting'> @ActingDirecting</a>
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-center mt-12'>
+          <div className='flex p-4 sm:p-8 justify-center items-center w-8/12 flex-col'>
+            <b className='text-gray-900 dark:text-white'>حامیان ما</b>
+            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 mt-5'>
               {sponsors.map((item, index) => (
                 <a
                   key={index}
                   className={`flex flex-col items-center justify-center p-4 bg-gray-100 dark:bg-gray-800 rounded-lg transition duration-300 transform hover:scale-105 ${boxStyle}`}
                   href={item.url}
-                  rel="noreferrer"
-                  target="_blank"
+                  rel='noreferrer'
+                  target='_blank'
                 >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="h-auto w-20 rounded-full"
+                    className='h-auto w-20 rounded-full'
                   />
-                  <p className="text-xs mt-2">{item.name}</p>
+                  <p className='text-xs mt-2'>{item.name}</p>
                 </a>
               ))}
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-12">
-          <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center sm:w-8/12 w-11/12">
-            <div className="flex items-center flex-col">
+        <div className='flex justify-center mt-12'>
+          <div className='flex mt-12 p-4 sm:p-8 justify-center flex-row items-center sm:w-8/12 w-11/12'>
+            <div className='flex items-center flex-col'>
               <br />
               <img
                 src={poster}
-                alt="poster"
-                className="sm:size-4/5 shadow-lg rounded-lg"
+                alt='poster'
+                className='sm:size-4/5 shadow-lg rounded-lg'
               />
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }

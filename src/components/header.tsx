@@ -3,8 +3,8 @@ import { CiDark, CiLight } from "react-icons/ci";
 import { useTheme } from "../hooks/themeHook";
 import Logo from "./logo";
 
+
 const Header = () => {
-  // const [drawerOpen, setDrawerOpen] = useState(false);
   const [showShadow, setShowShadow] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const drawerRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,7 @@ const Header = () => {
           <div className="flex justify-between py-4">
             <Logo slug={"/"} />
             <div className="flex flex-row justify-between items-center space-x-2 space-x-reverse">
-              <p className="text-gray-800 dark:text-white">رقابتی برای تسلط بر بازار‌ها</p>
+              <a href='https://t.me/ActingDirecting' className="text-gray-800 shadow-md  p-2 rounded-md hover:bg-slate-200 hover:dark:bg-slate-700 dark:text-white">ثبت نام</a>
               <div className="flex items-center space-x-4 rtl:space-x-reverse sm:px-0 px-5">
                 {theme === "light" ? (
                   <CiDark
