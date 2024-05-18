@@ -1,5 +1,4 @@
 import { routes } from "./routes";
-import { TbHeartCode } from "react-icons/tb";
 import { FaFireAlt } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { CiTrophy } from "react-icons/ci";
@@ -11,7 +10,7 @@ import { CiBitcoin } from "react-icons/ci";
 import aut from "../assets/aut_fa.png";
 import algo from "../assets/computional-geometry.png";
 import quera from "../assets/quera.png";
-// import magnetxd from '../assets/magnetxd.png'
+import magnetxd from "../assets/app-logo.png";
 import wallex from "../assets/wallex.png";
 import mcs from "../assets/mcs.png";
 import idk from "../assets/idk.png";
@@ -117,5 +116,10 @@ export const sponsors = [
     name: "آی دی کی",
     url: "https://idk.ir/",
     image: idk,
+  },
+  {
+    name: "آی دی کی",
+    url: "https://idk.ir/",
+    image: magnetxd,
   },
 ];

@@ -17,21 +17,21 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   useEffect(() => {
-    const localTheme = localStorage.getItem('theme')
+    const localTheme = localStorage.getItem("theme");
     if (localTheme) {
-      setTheme(localTheme)
-      if (localTheme === 'dark') {
-        document.documentElement.classList.add('dark')
-        document.documentElement.style.backgroundColor = 'rgb(38, 38, 38)'
+      setTheme(localTheme);
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.backgroundColor = "rgb(38, 38, 38)";
       }
-      if (localTheme === 'light') {
-        document.documentElement.classList.remove('dark')
-        document.documentElement.style.backgroundColor = '#fff'
+      if (localTheme === "light") {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.backgroundColor = "#fff";
       }
     }
-  }, [setTheme])
+  }, [setTheme]);
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     document.documentElement.classList.toggle("dark");

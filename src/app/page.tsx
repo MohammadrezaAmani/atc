@@ -1,6 +1,6 @@
 import { sponsors } from "../configs/site";
 import winner from "../assets/winner.png";
-import poster from "../assets/ATC-Final.png";
+import poster from "../assets/ATC-Web.jpg";
 
 const boxStyle =
   "rounded-lg sm:shadow-xl shadow-lg bg-gradient-to-tl from-white to-gray-100 dark:from-neutral-800 dark:to-neutral-800 transform hover:-translate-y-0.5 transition duration-400 ease-in-out md:hover:shadow-2xl hover:shadow-xl";
@@ -19,10 +19,11 @@ export default function HomePage() {
               </b>
               <br />
               <br />
-              مسابقه الگوریتم تریدینگ امیرکبیر اولین رویداد با محوریت پیش‌بینی
-              بازارهای سرمایه در ایران است. این مسابقه یک چالش جدی در حوزه
-              معاملات الگوریتمی است که شرکت‌کنندگان باید استراتژی‌های معاملاتی
-              خود را پیاده‌سازی کنند.
+              مسابقه الگوریتم تریدینگ امیرکبیر اولین رویداد با موضوع پیش‌بینی
+              بازارهای سرمایه در ایران است. این موضوع یک چالش جدی در حوزه
+              معاملات الگوریتمی است. شرکت‌کنندگان در این مسابقه باید
+              استراتژی‌های معاملاتی خود را پیاده‌سازی و با کمک داده های داده شده
+              به مسابقه بگذارند.
             </p>
           </div>
         </div>
@@ -30,22 +31,21 @@ export default function HomePage() {
           <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center w-8/12">
             <div className="flex items-center flex-col">
               <div className="flex flex-col sm:flex-row mt-4 justify-between flex-wrap">
-                <p className="text-gray-600 dark:text-gray-300 sm:w-1/2">
+                <p className="text-gray-600 dark:text-gray-300 sm:w-3/5">
                   <b className="text-gray-900 dark:text-white">لیگ‌ها</b>
                   <br />
-                  لیگ‌های مسابقه هر یک بر اساس یکی از شاخص‌های زیر، که از جمله
-                  شاخص‌های مهم در ارزیابی کیفیت استراتژی‌های معاملاتی استفاده
-                  می‌شوند، هستند. شرکت‌کنندگان به این صورت عمل می‌کنند که انتخاب
-                  می‌کنند که در کدام یک از این شاخص‌ها با رقبای خود رقابت کنند.
-                  تا حد زیادی، تلاش شده است که این شاخص‌ها به گونه‌ای انتخاب
-                  شوند که همپوشانی کمی داشته باشند. لیگ‌های مسابقه که از
-                  شاخص‌های مطرح در سنجش کیفیت استراتژی‌های معاملاتی استفاده
-                  می‌کنند، به شرح زیر هستند: که استراتژی چقدر سودآور بوده است.
+                  لیگ‌های مسابقه بر اساس شاخص‌های زیر، که از جمله شاخص‌های مهم
+                  در ارزیابی کیفیت استراتژی‌های معاملاتی استفاده هستند، برگزار
+                  می شوند. شرکت‌کنندگان ابتدا انتخاب می‌کنند که می خواهند در
+                  کدام یک از شاخص‌ها با رقبای خود رقابت کنند. شاخص‌ها به گونه‌ای
+                  انتخاب شده اند که همپوشانی کمی داشته باشند. لیگ‌های مسابقه که
+                  بر اساس شاخص‌های مطرح در سنجش کیفیت استراتژی‌های معاملاتی
+                  انتخاب شده اند، به شرح زیر هستند:
                 </p>
                 <img
                   src={winner}
                   alt="winner"
-                  className="sm:w-1/2 h-auto hidden sm:block"
+                  className="sm:w-2/5 h-auto hidden sm:block"
                 />
               </div>
             </div>
@@ -58,12 +58,12 @@ export default function HomePage() {
                 <p className="text-gray-600 dark:text-gray-300">
                   <b className="text-gray-900 dark:text-white">لیگ بازدهی</b>
                   <br />
-                  ین لیگ بر اساس عملکرد نهایی استراتژی، به عنوان بازدهی نهایی،
-                  تشکیل می‌شود. این شاخص به ما نشان می‌دهد که یک استراتژی چقدر
-                  سودآور بوده است، به عبارت دیگر، درصد سود کل نسبت به
-                  سرمایه‌گذاری اولیه را نمایش می‌دهد. برای ارزیابی دقیق‌تر، این
-                  بازدهی ممکن است به سود بای-اند-هلد تقسیم شود تا میزان ریسک
-                  مدیریت شده نیز مدنظر قرار گیرد.
+                  این لیگ بر اساس عملکرد نهایی استراتژی، به عنوان بازدهی نهایی،
+                  تشکیل می‌شود. این شاخص نشان می‌دهد که یک استراتژی چقدر سودآور
+                  است، به عبارت دیگر، درصد سود کل نسبت به سرمایه‌گذاری اولیه را
+                  نمایش می‌دهد. برای ارزیابی دقیق‌تر، این بازدهی ممکن است به سود
+                  بای-اند-هلد تقسیم شود تا میزان ریسک مدیریت شده نیز مدنظر قرار
+                  گیرد.
                 </p>
               </div>
               <div className="border-2 rounded-md shadow-emerald-100 dark:shadow-emerald-900 shadow-lg p-4 m-2">
@@ -85,13 +85,13 @@ export default function HomePage() {
                     لیگ بازدهی به بیشینه کاهش
                   </b>
                   <br />
-                  ین شاخص نسبت بازدهی نهایی به بیشینه کاهش استراتژی را نمایش
-                  می‌دهد. در واقع، نشان می‌دهد که استراتژی چقدر سودآور بوده است
-                  نسبت به حداکثر افت ریسکی که تجربه کرده است. این معیار مهم است
-                  زیرا بسیاری از سرمایه‌گذاران تمایلی به تحمل افت‌های بالایی
+                  این شاخص نسبت بازدهی نهایی به بیشینه کاهش استراتژی را نمایش
+                  می‌دهد. در واقع، نشان می‌دهد که استراتژی نسبت به حداکثر افت
+                  ریسکی که تجربه کرده است چقدر سودآور است. این معیار مهم است
+                  زیرا بسیاری از سرمایه‌گذاران تمایلی به تحمل افت‌های بالا
                   ندارند و به دنبال سودآوری با حفظ ریسک مناسب هستند. این شاخص
-                  می‌تواند مفید باشد برای افرادی که به دنبال تعادل میان بازدهی و
-                  ریسک در سرمایه‌گذاری‌شان هستند.
+                  می‌تواند برای افرادی که به دنبال تعادل میان بازدهی و ریسک در
+                  سرمایه‌گذاری‌شان هستند مفید باشد.
                 </p>
               </div>
             </div>
@@ -99,22 +99,9 @@ export default function HomePage() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center w-8/12">
-            <div className="flex items-center flex-col">
-              <p className="text-gray-900 dark:text-white">پوستر مسابقات</p>
-              <br />
-              <img
-                src={poster}
-                alt="poster"
-                className="sm:size-1/3 shadow-lg rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center mt-12">
           <div className="flex p-4 sm:p-8 justify-center items-center w-8/12 flex-col">
             <b className="text-gray-900 dark:text-white">حامیان ما</b>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-4 mt-5">
               {sponsors.map((item, index) => (
                 <a
                   key={index}
@@ -131,6 +118,18 @@ export default function HomePage() {
                   <p className="text-xs mt-2">{item.name}</p>
                 </a>
               ))}
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center mt-12">
+          <div className="flex mt-12 p-4 sm:p-8 justify-center flex-row items-center sm:w-8/12 w-11/12">
+            <div className="flex items-center flex-col">
+              <br />
+              <img
+                src={poster}
+                alt="poster"
+                className="sm:size-4/5 shadow-lg rounded-lg"
+              />
             </div>
           </div>
         </div>

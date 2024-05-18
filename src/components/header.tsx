@@ -57,7 +57,23 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between py-4">
             <Logo slug={"/"} />
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="flex flex-row justify-between items-center space-x-2 space-x-reverse">
+              <p className="text-gray-800 dark:text-white">رقابتی برای تسلط بر بازار‌ها</p>
+              <div className="flex items-center space-x-4 rtl:space-x-reverse sm:px-0 px-5">
+                {theme === "light" ? (
+                  <CiDark
+                    className="w-6 h-6 cursor-pointer"
+                    onClick={toggleTheme}
+                  />
+                ) : (
+                  <CiLight
+                    className="w-6 h-6 text-yellow-400 cursor-pointer"
+                    onClick={toggleTheme}
+                  />
+                )}
+              </div>
+            </div>
+            {/* <div className="hidden md:flex items-center space-x-4">
               <nav>
                 <ul className="flex space-x-4 rtl:space-x-reverse">
                   {menuItems.map((item, index) => (
@@ -94,10 +110,11 @@ const Header = () => {
               >
                 <RiMenu4Line className="w-6 h-6" />
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </header>
+      {/*
 
       <div
         className={`fixed inset-0 z-40 overflow-hidden bg-neutral-700 bg-opacity-50 backdrop-blur-md transition-opacity duration-300 shadow-lg ${
@@ -168,7 +185,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
